@@ -319,6 +319,7 @@ puts "Seed: Seeding tickets..."
 ticket1 = Ticket.create!(
   max_time: 30,
   actual_time: 30,
+  description: "It's actually not that bad",
   user: user1,
   billed: true,
   paid: true,
@@ -338,6 +339,7 @@ ticket2 = Ticket.create!(
 ticket3 = Ticket.create!(
   max_time: 30,
   user: user2,
+  description: "I have an issue",
 )
 
 puts "Seed: Seeding user uploads..."
