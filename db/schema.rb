@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_02_101053) do
+ActiveRecord::Schema.define(version: 2018_09_02_091033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,18 @@ ActiveRecord::Schema.define(version: 2018_09_02_101053) do
   create_table "companies", force: :cascade do |t|
     t.string "name", default: " "
     t.boolean "signup_flag", default: false
+    t.integer "promotional_ticket_time", default: 0
     t.boolean "billing_clearance_company", default: false
-    t.boolean "billing_clearance_internal", default: true
+    t.boolean "billing_clearance_internal", default: false
     t.string "photo"
+    t.string "billing_address_street"
+    t.string "billing_address_postal_code"
+    t.string "billing_address_city"
+    t.bigint "country_id"
+    t.string "vat_identification_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_companies_on_country_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -42,15 +49,16 @@ ActiveRecord::Schema.define(version: 2018_09_02_101053) do
   end
 
   create_table "tickets", force: :cascade do |t|
-    t.integer "max_time", default: 60
+    t.string "title"
+    t.string "description"
+    t.integer "max_time"
     t.integer "actual_time"
     t.bigint "user_id"
     t.boolean "billed", default: false
     t.boolean "paid", default: false
     t.string "status", default: "open"
-    t.string "type_of_issue", default: "not specified"
+    t.string "type_of_issue"
     t.boolean "satisfaction"
-    t.string "title", default: "issue description not specified"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tickets_on_user_id"
@@ -60,8 +68,10 @@ ActiveRecord::Schema.define(version: 2018_09_02_101053) do
     t.string "first_name", default: ""
     t.string "last_name", default: ""
     t.bigint "company_id"
+    t.boolean "admin", default: false
     t.integer "minute_approval", default: 0
     t.boolean "time_restriction", default: false
+    t.string "cost_center", default: "cost center not specified"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -92,6 +102,7 @@ ActiveRecord::Schema.define(version: 2018_09_02_101053) do
   end
 
   add_foreign_key "comments", "tickets"
+  add_foreign_key "companies", "countries"
   add_foreign_key "tickets", "users"
   add_foreign_key "users", "companies"
   add_foreign_key "useruploads", "tickets"

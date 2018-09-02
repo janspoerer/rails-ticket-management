@@ -1,0 +1,21 @@
+<div class="container">
+
+  <h1>Add a new ticket</h1>
+
+  <%= render 'form', ticket: @ticket %>
+
+  <h1>Open tickets</h1>
+
+  <%= render 'index', ticket: @open_tickets %>
+
+  <h1>Past tickets</h1>
+
+  <%= render 'index', ticket: @past_tickets %>
+
+  <h1>Tickets closed by user</h1>
+
+  <%= render 'index', ticket: @closed_by_user_tickets %>
+
+</div>
+
+

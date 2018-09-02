@@ -331,6 +331,8 @@ ticket1 = Ticket.create!(
 ticket2 = Ticket.create!(
   max_time: 120,
   user: user1,
+  title: "Very bad issue",
+  description: "Ahhhh help me"
 )
 
 ticket3 = Ticket.create!(

@@ -16,7 +16,7 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.string :billing_address_street
       t.string :billing_address_postal_code
       t.string :billing_address_city
-      t.references  :billing_address_country, foreign_key: true
+      t.references :country, foreign_key: true
       t.string :vat_identification_number
 
       t.timestamps
