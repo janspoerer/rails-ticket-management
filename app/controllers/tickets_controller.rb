@@ -14,7 +14,8 @@ class TicketsController < ApplicationController
     authorize @ticket
 
     if @ticket.save!
-      redirect_to tickets_path(@ticket)
+
+      redirect_to new_ticket_path(@ticket), notice: "Success. We will process your ticket within 24 hours. Ticket ID: #{@ticket.id}"
     else
       render :new
     end
