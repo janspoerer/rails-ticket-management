@@ -3,10 +3,35 @@
     <div class="col-xs-12">
       <div class="Card__inner">
         <div class="Card__body">
-          <h3 class="Card__title"><%= ticket.title %></h3>
-          <div class="Card__price"> <%= "Time max: #{ticket.max_time}" %> </div>
-          <div class="Card__price"> <%= "Time actual: #{ticket.actual_time}" %> </div>
-          <div> <%= "#{ticket.description}" %></div>
+          <h3 class="Card__title"><%= @ticket.title %></h3>
+          <div class="Card__price"> <%= "Time max: #{@ticket.max_time}" %> </div>
+          <div class="Card__price"> <%= "Time actual: #{@ticket.actual_time}" %> </div>
+          <div>
+            <%= "#{@ticket.description}" %>
+          </div>
+          <div>
+            <br>
+            <h3>Comments</h3>
+            <% if @comments.present? %>
+              <% @comments.each do |comment| %>
+                <p>
+                  <%= "#{comment.content}" %>
+                  <br>
+                  <%= "by #{comment.ticket.user.first_name} #{comment.ticket.user.last_name}" %>
+                </p>
+              <% end %>
+              <br>
+            <% else %>
+              No comments
+            <% end %>
+          </div>
+          <div style="margin-top: 20px">
+            <%= simple_form_for([@ticket, @comment]) do |f| %>
+              <%= f.label :content, "Comment here" %>
+              <%= f.input :content, placeholder: "Add additional information, request a call, or give feedback", label: false %>
+              <%= f.submit 'Submit comment' %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
