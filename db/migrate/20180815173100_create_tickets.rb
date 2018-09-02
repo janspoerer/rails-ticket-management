@@ -10,7 +10,6 @@ class CreateTickets < ActiveRecord::Migration[5.2]
       t.string :type_of_issue, default: "not specified"
       t.boolean :satisfaction, default: nil
       t.string :title, default: "issue description not specified"
-      t.string :file, default: ""
 
       t.timestamps
     end

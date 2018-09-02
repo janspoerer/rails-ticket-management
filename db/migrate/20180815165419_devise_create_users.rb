@@ -7,8 +7,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string      :last_name, default: ""
       t.references  :company, foreign_key: true
 
+      t.boolean     :admin, default: false
+
       t.integer     :minute_approval, default: 0
       t.boolean     :time_restriction, default: false
+      t.string      :cost_center, default: "cost center not specified"
 
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
