@@ -1,0 +1,11 @@
+<div class="container">
+  <% if tickets.present? %>
+    <% tickets.each do |ticket|  %>
+      <div class="col-xs-12 col-sd-6 col-md-6">
+        <%= render 'shared/card', ticket: ticket %>
+      </div>
+    <% end %>
+  <% else %>
+    No tickets in this category.
+  <% end %>
+</div>

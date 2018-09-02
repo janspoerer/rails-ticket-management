@@ -1,0 +1,9 @@
+<%= link_to ticket_path(ticket), class: "Card" do %>
+  <div class="Card__inner">
+    <div class="Card__body">
+      <h3 class="Card__title"><%= ticket.title %></h3>
+      <div class="Card__price"> <%= "Time max: #{ticket.max_time}" %> </div>
+      <div class="Card__price"> <%= "Time actual: #{ticket.actual_time}" %> </div>
+    </div>
+  </div>
+<% end %>
