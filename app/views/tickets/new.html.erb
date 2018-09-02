@@ -1,16 +1,30 @@
-<div class="container">
+<div class="container container__custom">
+
+  <div></div>
 
   <h1>Add a new ticket</h1>
 
   <%= render 'form', ticket: @ticket %>
 
+</div>
+
+<div class="container container__custom">
+
   <h1>Open tickets (<%= @open_tickets.count %>) </h1>
 
   <%= render 'index', tickets: @open_tickets %>
 
+</div>
+
+<div class="container container__custom">
+
   <h1>Past tickets (<%= @past_tickets.count %>) </h1>
 
   <%= render 'index', tickets: @past_tickets %>
+
+</div>
+
+<div class="container container__custom">
 
   <h1>Tickets closed by user (<%= @closed_by_user_tickets.count %>) </h1>
 

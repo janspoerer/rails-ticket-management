@@ -4,8 +4,9 @@ class TicketsController < ApplicationController
   after_action :verify_policy_scoped, only: [new]
 
   def new
-    @ticket = Ticket.new(user: current_user)
+    @ticket = Ticket.new
     authorize @ticket
+    @ticket.user = current_user
 
     @open_tickets = policy_scope(Ticket).where(status: "open")
     authorize @open_tickets
@@ -19,15 +20,21 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
-    @ticket.user = current_user
+
     authorize @ticket
 
-    if @ticket.save!
+    @ticket.user_id = @current_user.id
 
-      redirect_to new_ticket_path(@ticket), notice: "Success. We will process your ticket within 24 hours. Ticket ID: #{@ticket.id}"
+    if @ticket.save
+      redirect_to new_ticket_path, notice: "Success. We will process your ticket within 24 hours. Ticket ID: #{@ticket.id}"
     else
       render :new
     end
+  end
+
+  def show
+    @ticket = Ticket.find(params[:id])
+    authorize @ticket
   end
 
   private
