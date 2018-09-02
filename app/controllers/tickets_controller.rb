@@ -1,11 +1,20 @@
 class TicketsController < ApplicationController
   include Pundit
   after_action :verify_authorized
-  #after_action :verify_policy_scoped
+  after_action :verify_policy_scoped, only: [new]
 
   def new
     @ticket = Ticket.new(user: current_user)
     authorize @ticket
+
+    @open_tickets = policy_scope(Ticket).where(status: "open")
+    authorize @open_tickets
+
+    @past_tickets = policy_scope(Ticket).where(status: "closed")
+    authorize @past_tickets
+
+    @closed_by_user_tickets = policy_scope(Ticket).where(status: "closed by user")
+    authorize @closed_by_user_tickets
   end
 
   def create

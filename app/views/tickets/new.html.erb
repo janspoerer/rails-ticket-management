@@ -4,17 +4,17 @@
 
   <%= render 'form', ticket: @ticket %>
 
-  <h1>Open tickets</h1>
+  <h1>Open tickets (<%= @open_tickets.count %>) </h1>
 
-  <%= render 'index', ticket: @open_tickets %>
+  <%= render 'index', tickets: @open_tickets %>
 
-  <h1>Past tickets</h1>
+  <h1>Past tickets (<%= @past_tickets.count %>) </h1>
 
-  <%= render 'index', ticket: @past_tickets %>
+  <%= render 'index', tickets: @past_tickets %>
 
-  <h1>Tickets closed by user</h1>
+  <h1>Tickets closed by user (<%= @closed_by_user_tickets.count %>) </h1>
 
-  <%= render 'index', ticket: @closed_by_user_tickets %>
+  <%= render 'index', tickets: @closed_by_user_tickets %>
 
 </div>
 
