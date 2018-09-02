@@ -4,10 +4,12 @@ class TicketsController < ApplicationController
   after_action :verify_policy_scoped, only: [new]
 
   def new
+    # New
     @ticket = Ticket.new
     authorize @ticket
     @ticket.user = current_user
 
+    # Index
     @open_tickets = policy_scope(Ticket).where(status: "open")
     authorize @open_tickets
 
@@ -16,11 +18,14 @@ class TicketsController < ApplicationController
 
     @closed_by_user_tickets = policy_scope(Ticket).where(status: "closed by user")
     authorize @closed_by_user_tickets
+
+    # Comments and new comment
+    @comment = Comment.new
+    authorize @comment
   end
 
   def create
     @ticket = Ticket.new(ticket_params)
-
     authorize @ticket
 
     @ticket.user = @current_user
@@ -40,6 +45,10 @@ class TicketsController < ApplicationController
   def show
     @ticket = Ticket.find(params[:id])
     authorize @ticket
+
+    @comment = Comment.new
+
+    @comments = @ticket.comments
   end
 
   private

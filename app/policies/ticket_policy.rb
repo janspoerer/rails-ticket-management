@@ -16,4 +16,8 @@ class TicketPolicy < ApplicationPolicy
   def new?
     create?
   end
+
+  def show?
+    current_user = @record.user
+  end
 end

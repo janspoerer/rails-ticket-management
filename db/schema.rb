@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_09_02_091033) do
   create_table "comments", force: :cascade do |t|
     t.bigint "ticket_id"
     t.text "content", default: ""
+    t.boolean "read", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ticket_id"], name: "index_comments_on_ticket_id"
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 2018_09_02_091033) do
     t.integer "minute_approval", default: 0
     t.boolean "time_restriction", default: false
     t.string "cost_center", default: "cost center not specified"
+    t.boolean "delete_request", default: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
