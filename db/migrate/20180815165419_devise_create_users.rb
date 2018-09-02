@@ -13,6 +13,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.boolean     :time_restriction, default: false
       t.string      :cost_center, default: "cost center not specified"
 
+      t.boolean     :delete_request, default: false
+
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 

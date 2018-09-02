@@ -4,4 +4,8 @@ class UserPolicy < ApplicationPolicy
       scope.all
     end
   end
+
+  def mark_user_for_deletion?
+    @user = user
+  end
 end

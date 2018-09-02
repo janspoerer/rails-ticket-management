@@ -23,12 +23,17 @@ class TicketsController < ApplicationController
 
     authorize @ticket
 
-    @ticket.user_id = @current_user.id
+    @ticket.user = @current_user
 
-    if @ticket.save
-      redirect_to new_ticket_path, notice: "Success. We will process your ticket within 24 hours. Ticket ID: #{@ticket.id}"
+    if @current_user.company.present?
+      @ticket.company = @current_user.company.name
+      if @ticket.save
+        redirect_to new_ticket_path, notice: "Success. We will process your ticket within 24 hours. Ticket ID: #{@ticket.id}"
+      else
+        render :new
+      end
     else
-      render :new
+      redirect_to new_ticket_path, alert: "Your account is not yet associated with a company. Please ask your coworkers if they already set up a company account or contact us directly to create a company account for you: jan.spoerer@whu.edu"
     end
   end
 

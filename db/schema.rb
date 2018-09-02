@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 2018_09_02_091033) do
     t.string "status", default: "open"
     t.string "type_of_issue"
     t.boolean "satisfaction"
+    t.datetime "closed_at"
+    t.string "company"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_tickets_on_user_id"

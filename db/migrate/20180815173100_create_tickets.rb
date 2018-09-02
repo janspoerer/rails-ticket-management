@@ -12,6 +12,7 @@ class CreateTickets < ActiveRecord::Migration[5.2]
       t.string :type_of_issue, default: nil
       t.boolean :satisfaction, default: nil
       t.datetime :closed_at, default: nil
+      t.string :company
 
       t.timestamps
     end
