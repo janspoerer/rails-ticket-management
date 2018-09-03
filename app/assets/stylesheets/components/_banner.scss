@@ -1,0 +1,64 @@
+.Banner {
+  position: relative;
+  margin-top: -#{$navbar-height};
+
+  &__bg {
+    position: absolute;
+    background: linear-gradient(150deg, #53f 15%, #05d5ff 70%, #a6ffcb 94%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: skewY(-7deg);
+    transform-origin: 0;
+  }
+
+  &__content {
+    margin-top: -7%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__body {
+    max-width: 680px;
+    margin-right: auto;
+  }
+
+  &__heading {
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  &__leading {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  &__form {
+    border-radius: 6px;
+    box-shadow: 0 15px 46px rgba(26, 26, 29, 0.3), 0 15px 90px rgba(0, 0, 0, 0.2);
+  }
+
+  &__input-group {
+    display: flex;
+  }
+
+  &__input {
+    height: 52px;
+    font-size: 18px;
+    border: 0;
+  }
+
+  &__btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
