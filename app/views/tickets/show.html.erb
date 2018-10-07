@@ -11,7 +11,7 @@
           </div>
           <div>
             <br>
-            <h3>Comments</h3>
+            <h3> <%= t("comments") %> </h3>
             <% if @comments.present? %>
               <% @comments.each do |comment| %>
                 <p>
@@ -22,20 +22,20 @@
               <% end %>
               <br>
             <% else %>
-              No comments
+              <%= t("no_comments") %>
             <% end %>
           </div>
           <div style="margin-top: 20px">
             <%= simple_form_for([@ticket, @comment]) do |f| %>
-              <%= f.label :content, "Comment here" %>
-              <%= f.input :content, placeholder: "Add additional information, request a call, or give feedback", label: false %>
-              <%= f.submit 'Submit comment' %>
+              <%= f.label :content, t("comment_here") %>
+              <%= f.input :content, placeholder: t("comment_placeholder"), label: false %>
+              <%= f.submit t("submit_comment") %>
             <% end %>
           </div>
         </div>
       </div>
     </div>
   <% else %>
-    This ticket does not exist.
+    <%= t("this_ticket_does_not_exist") %>
   <% end %>
 </div>

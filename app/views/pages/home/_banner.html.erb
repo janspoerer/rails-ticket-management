@@ -3,9 +3,11 @@
   <div class="Banner__content">
     <div class="Banner__inner container">
       <div class="Banner__body">
-        <h1 class="Banner__heading">Want to improve your and your team's Excel knowledge?</h1>
-        <p class="Banner__leading">Create excellent spreadsheets.</p>
-        <%= link_to 'Sign up for free', new_user_registration_path, class: "btn btn-success btn-lg"  %>
+        <h1 class="Banner__heading">
+        <%= t("banner_question_want_to_improve_excel") %>
+        </h1>
+        <p class="Banner__leading"> <%= t("create_excellent_spreadsheets") %> </p>
+        <%= link_to t("sign_up_for_free"), new_user_registration_path, class: "btn btn-success btn-lg"  %>
       </div>
     </div>
   </div>
