@@ -1,21 +1,104 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
+en:
+  # pages/home/_banner
+  banner_question_want_to_improve_excel: "Want to improve your and your team's Excel knowledge?"
+  create_excellent_spreadsheets: "Create excellent spreadsheets."
+  sign_up_for_free: "Sign up for free"
+
+  # pages/home/_perks
+  we_conduct_all_our_work_from_germany: "We conduct all our work from Germany. We speak German and English."
+  made_in_germany: "Made in Germany"
+  you_receive_free_test: "You receive free test capacity to try our service after you created a company account."
+  no_risk: "No risk"
+  successful: "Successful"
+  we_advise_companies_from: "We advise companies from all industries and have experience with handling large amounts of data."
+  transparent_pricing: "Transparent pricing"
+  you_decide_about_the_maximum_amount_of_time: "You decide about the maximum amount of time you want to allow us to work on a ticket. Our hourly rate is 140 Euros."
+
+  # pages/home/_featurette_1
+  send_us_your_spreadsheets: "Send us your spreadsheets!"
+  we_are_a_professional_services_provider: "We are a professional services provider that takes care of your Excel-related work. With our ticket system, you can submit issues to us and we solve your problem within 24h."
+
+  # pages/home/_featurette_2
+  we_offer_excel_as_a_service: "We offer Excel as a service"
+  you_can_tell_us_to_set_up_a_complex_excel: "You can tell us to set up a complex Excel workbook from scratch or ask us to fix existing Excel sheets. We will solve any task that revolves around data processing or financial modeling in Excel. For example, we helped clients to improve their cash flow projections and to reduce the time they use on payroll documentation."
+
+  # shared/_footer
+  show_imprint: "Show imprint"
+  imprint: "Imprint"
+  legal_representative: "Legal representative: "
+  contact_details: "Contact details: "
+  telephone: "Telephone: +49 171 5395666"
+  vat_id: "VAT-ID: "
+  data_notice: "Data notice: "
+
+  # tickets/show
+  comments: "Comments"
+  no_comments: "No comments"
+  comment_here: "Comment here"
+  comment_placeholder: "Add additional information, request a call, or give feedback"
+  submit_comment: "Submit comment"
+  this_ticket_does_not_exist: "This ticket does not exist."
+
+  # tickets/new
+  add_a_new_ticket: "Add a new ticket"
+  open_tickets: "Open tickets"
+  past_tickets: "Past tickets"
+  tickets_closed_by_user: "Tickets closed by user"
+
+  # tickets/_index
+  no_ticket_in_this_category: "No tickets in this category."
+
+  # pages/home/_cta
+  ready_to_outsource_your_work: "Ready to outsource your work?"
+  sign_up_for_free_cta: "Sign up for free"
+
+  # tickets/_form
+  add_a_title_for_your_issue: "Add a title for your issue"
+  please_provide_a_full_description: "Please provide a full description so we can solve the problem faster"
+  type_of_issue: "Type of issue"
+  select_maximum_time: "- Select the maximum amount of time we should work on the issue -"
+  submit_ticket: "Submit ticket"
+  maximum_time: "Maximum time we should work on the ticket"
+  title_label: "Title"
+  max_time_label: "Max time"
+  description_label: "Description"
+  # list in tickets/_form
+  select_your_issue: "- Select your issue -"
+  knowledge_issue: "1 - Knowledge issue"
+  setup_issue: "2 - Setup issue"
+  emergency_issue: "3 - Emergency issue/unexpected error"
+  capacity_support: "4 - Capacity support"
+
+  # shared/_card
+  time_max: "Time max:"
+  time_actual: "Time actual:"
+
+  # devise/registrations/new
+  sign_up: "Sign up"
+  characters_minimum: "characters minimum"
+
+  # devise/registrations/edit
+  currently_waiting_confirmation_for: "Currently waiting confirmation for: %{email}"
+  leave_blank_if_you_dont_want_to_change_it: "Leave it blank if you don't want to change it"
+  we_need_your_current_password_to_confirm_your_changes: "We need your current password to confirm your changes"
+  email_devise_registrations_edit: "Email"
+  password_devise_registrations_edit: "Password"
+  password_confirmation_devise_registrations_edit: "Confirm password"
+  current_password_devise_registrations_edit: "Current password"
+  update: "Update"
+  cancel_my_account: "Cancel my account"
+  unhappy: "Unhappy?"
+  cancel_my_account_heading: "Cancel my account"
+  back: "Back"
+  edit: "Edit your %{name} account"
+
+  # devise/passwords/edit
+  new_password: "New password"
+  devise_passwords_edit_confirm_your_new_password: "Confirm your new password"
+
+  # devise/passwords/edit
+  send_me_reset_password_instructions: "Send me reset password instructions"
+
 # The following keys must be escaped otherwise they will not be retrieved by
 # the default I18n backend:
 #
@@ -28,6 +111,3 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
-en:
-  hello: "Hello world"

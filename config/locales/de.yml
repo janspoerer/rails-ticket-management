@@ -1,0 +1,115 @@
+de:
+  # pages/home/_banner
+  banner_question_want_to_improve_excel: "Möchten Sie Ihre Excel-Skills weiterentwickeln?"
+  create_excellent_spreadsheets: "Erstellen Sie überragende Excel-Modelle."
+  sign_up_for_free: "Kostenlos anmelden"
+
+  # pages/home/_perks
+  we_conduct_all_our_work_from_germany: "Wir arbeiten ausschließlich in Deutschland. Wir sprechen deutsch und englisch."
+  made_in_germany: "Made in Germany"
+  you_receive_free_test: "Sie erhalten freie Teststunden nach Einrichtung eines Unternehmenskontos."
+  no_risk: "Null Risiko"
+  successful: "Erfolgreich und bewährt"
+  we_advise_companies_from: "Wir beraten Unternehmen aus allen Branchen und haben Erfahrung mit dem Umgang mit großen Datenmengen."
+  transparent_pricing: "Transparente Konditionen"
+  you_decide_about_the_maximum_amount_of_time: "Sie entscheiden, wie lange wir maximal an einem Ticket arbeiten sollen. Unser Stundensatz beträgt 140 Euro."
+
+  # pages/home/_featurette_1
+  send_us_your_spreadsheets: "Schicken Sie uns Ihre Excel-Dateien!"
+  we_are_a_professional_services_provider: "Wir sind ein Dienstleister für Ihre Excel-Arbeiten. Wenn Sie ein Excel-Problem haben, können Sie uns Tickets über unser Ticket-Management-System schicken und wir bearbeiten Ihre Anfrage innerhalb von 24 Stunden."
+
+  # pages/home/_featurette_2
+  we_offer_excel_as_a_service: "Wir bieten Excel-as-a-service"
+  you_can_tell_us_to_set_up_a_complex_excel: "Wir erstellen Ihnen individualisierte Excel-Tabellen oder helfen Ihnen, bestehende Excel-Tabellen zu erweitern. Zu unseren Kompetenzen gehören unter anderem effiziente Datenverarbeitung und Financial Modeling. In der Vergangenheit haben unsere Kunden dabei unterstützt, Ihre Zahlungsflussprognosen zu optimieren und Gehaltsdokumentationen zu verbessern."
+
+  # shared/_footer
+  show_imprint: "Impressum anzeigen"
+  imprint: "Impressum"
+  legal_representative: "Gesetzlicher Vertreter: "
+  contact_details: "Kontakt: "
+  telephone: "Telefon: +49 171 5395666"
+  vat_id: "Umsatzsteuer-ID-Nr.: "
+  data_notice: "Datenschutz: "
+
+  # tickets/show
+  comments: "Kommentare"
+  no_comments: "Keine Kommentare"
+  comment_here: "Schreiben Sie hier Ihren Kommentar"
+  comment_placeholder: "Zusätzliche Informationen, Rückrufanforderung, Feedback"
+  submit_comment: "Kommentar abschicken"
+  this_ticket_does_not_exist: "Dieses Ticket gibt es nicht."
+
+  # tickets/new
+  add_a_new_ticket: "Neues Ticket"
+  open_tickets: "Offene Tickets"
+  past_tickets: "Alte Tickets"
+  tickets_closed_by_user: "Vom Nutzer geschlossene Tickets"
+
+  # tickets/_index
+  no_ticket_in_this_category: "Keine Tickets in dieser Kategorie."
+
+  # pages/home/_cta
+  ready_to_outsource_your_work: "Sind Sie bereit, Ihre Arbeit auszulagern?"
+  sign_up_for_free_cta: "Kostenlos anmelden"
+
+  # tickets/_form
+  add_a_title_for_your_issue: "Geben Sie einen Titel für Ihr Ticket an"
+  please_provide_a_full_description: "Beschreiben Sie die Aufgabe/das Problem möchlichst genau, sodass wir Ihr Problem schnell lösen können"
+  type_of_issue: "Problemkategorie"
+  select_maximum_time: "- Wählen Sie die maximale Zeit, die wir an dem Ticket arbeiten sollen -"
+  submit_ticket: "Ticket abschicken"
+  maximum_time: "Obere Zeitgrenze für diese Ticket"
+  title_label: "Titel"
+  max_time_label: "Maximale Zeit"
+  description_label: "Beschreibung"
+  # list in tickets/_form
+  select_your_issue: "- Wählen Sie eine Problemkategorie -"
+  knowledge_issue: "1 - Wissenslücke"
+  setup_issue: "2 - Neuerstellung/Konzeptionierung einer Excel-Datei"
+  emergency_issue: "3 - Notfall/unerwarteter Fehler"
+  capacity_support: "4 - Zeit- und Kapazitätsengpass"
+
+
+  # shared/_card
+  time_max: "Obere Zeitgrenze:"
+  time_actual: "Tatsächlich benötigte Zeit:"
+
+  # devise/registrations/new
+  sign_up: "Anmelden"
+  characters_minimum: "Buchstaben oder Zahlen mindestens"
+
+  # devise/registrations/edit
+  currently_waiting_confirmation_for: "Warten auf Bestätigung von: %{email}"
+  leave_blank_if_you_dont_want_to_change_it: "Bitte freilassen, wenn keine Änderung erwünscht"
+  we_need_your_current_password_to_confirm_your_changes: "Wir brauchen Ihr aktuelles Passwort zur Bestätigung Ihrer Änderungen"
+  email_devise_registrations_edit: "E-Mail"
+  password_devise_registrations_edit: "Passwort"
+  password_confirmation_devise_registrations_edit: "Passwort bestätigen"
+  current_password_devise_registrations_edit: "Aktuelles Passwort"
+  update: "Übernehmen"
+  cancel_my_account: "Konto löschen"
+  unhappy: "Nicht zufrieden?"
+  cancel_my_account_heading: "Löschen meines Kontos"
+  back: "Zurück"
+  edit: "%{name}-Konto bearbeiten"
+
+  # devise/passwords/edit
+  new_password: "Neues Passwort"
+  devise_passwords_edit_confirm_your_new_password: "Bestätigen Sie das neue Passwort"
+  change_my_password: "Passwort ändern"
+
+  # devise/passwords/edit
+  send_me_reset_password_instructions: "Passwort zurücksetzen"
+
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.

@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
 
+gem 'rails-i18n', '5.0.3'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 gem "pundit"
 
 gem 'bootsnap', require: false
