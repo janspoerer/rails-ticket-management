@@ -33,6 +33,18 @@
     webpack "^3.12.0"
     webpack-manifest-plugin "^1.3.2"
 
+"@types/jquery@^3.3.12":
+  version "3.3.12"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.12.tgz#e83229bcbf09dc668f9d4c1894864199521ff258"
+  integrity sha512-a5/b8XJyzPA+rzJTZDJUpWSfL7XfmaVmXMwJ/NdWCw0dz8+XRXf2NtutquJ0JOe40lCAjlkpGx7c0L4PEle3Qw==
+  dependencies:
+    "@types/sizzle" "*"
+
+"@types/sizzle@*":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
+  integrity sha512-7EJYyKTL7tFR8+gDbB6Wwz/arpGa0Mywk1TJbNzKzHtzbwVmY4HR9WqS5VV7dsBUKQmPNr192jHr/VpBluj/hg==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
