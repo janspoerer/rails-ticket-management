@@ -10,9 +10,9 @@ class CommentsController < ApplicationController
     authorize @comment
 
     if @comment.save
-      redirect_to ticket_path(@ticket), notice: "Comment added to ticket #{@ticket.id}"
+      redirect_to ticket_path(@ticket), notice: t("comment_added_to_ticket", ticket_id: @ticket.id)
     else
-      render :new
+      render :new, alert: t("comment_not_added_to_ticket")
     end
   end
 

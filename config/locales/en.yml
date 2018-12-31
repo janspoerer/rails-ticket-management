@@ -5,7 +5,7 @@ en:
   sign_up_for_free: "Sign up for free"
 
   # pages/home/_perks
-  we_conduct_all_our_work_from_germany: "We conduct all our work from Germany. We speak German and English."
+  we_conduct_all_our_work_from_germany: "We conduct all our work from Germany. We speak German and English and are available by phone."
   made_in_germany: "Made in Germany"
   you_receive_free_test: "You receive free test capacity to try our service after you created a company account."
   no_risk: "No risk"
@@ -38,12 +38,17 @@ en:
   comment_placeholder: "Add additional information, request a call, or give feedback"
   submit_comment: "Submit comment"
   this_ticket_does_not_exist: "This ticket does not exist."
+  comment_added_to_ticket: "Comment added to ticket %{ticket_id}."
+  comment_not_added_to_ticket: "We are sorry, there was an error when adding the comment. Please contact us to resolve the issue."
+  user_close_ticket: "This ticket was closed by the user %{user} at %{time}."
+  successfully_closed_ticket: "This ticket was closed.."
 
   # tickets/new
   add_a_new_ticket: "Add a new ticket"
   open_tickets: "Open tickets"
   past_tickets: "Past tickets"
   tickets_closed_by_user: "Tickets closed by user"
+  successfully_created: "Success. We will process your ticket within 24 hours. Ticket ID: #{@ticket.id}"
 
   # tickets/_index
   no_ticket_in_this_category: "No tickets in this category."
@@ -51,6 +56,7 @@ en:
   # pages/home/_cta
   ready_to_outsource_your_work: "Ready to outsource your work?"
   sign_up_for_free_cta: "Sign up for free"
+  learn_how_to_creat_a_ticket: "Learn how to create a ticket"
 
   # tickets/_form
   add_a_title_for_your_issue: "Add a title for your issue"
@@ -72,10 +78,14 @@ en:
   # shared/_card
   time_max: "Time max:"
   time_actual: "Time actual:"
+  in_progress: "In progress"
 
   # devise/registrations/new
   sign_up: "Sign up"
   characters_minimum: "characters minimum"
+
+  # devise/sessions/new
+  sign_in: "Sign in"
 
   # devise/registrations/edit
   currently_waiting_confirmation_for: "Currently waiting confirmation for: %{email}"

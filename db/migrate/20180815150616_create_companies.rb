@@ -1,7 +1,7 @@
 class CreateCompanies < ActiveRecord::Migration[5.2]
   def change
     create_table :companies do |t|
-      t.string :name, default: " "
+      t.string :name, required: true
       t.boolean :signup_flag, default: false
 
       # Promotions

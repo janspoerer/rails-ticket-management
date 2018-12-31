@@ -1,5 +1,12 @@
+<% if user_signed_in? %>
+<br>
+<br>
+<% else %>
 <%= render 'pages/home/banner' %>
+<% end %>
 <%= render 'pages/home/featurette_1' %>
+<br>
+<br>
 <%= render 'pages/home/featurette_2' %>
 <br>
 <br>

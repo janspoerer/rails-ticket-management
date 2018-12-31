@@ -1,6 +1,11 @@
 <section class="Cta">
   <div class="container">
     <h2 class="Cta__title"> <%= t("ready_to_outsource_your_work") %> </h2>
-    <%= link_to t("sign_up_for_free_cta"), new_user_registration_path, class: "btn btn-success btn-lg" %>
+    <% if user_signed_in? %>
+        <%= link_to t("learn_how_to_creat_a_ticket"), new_ticket_path, class: "btn btn-success btn-lg" %>
+    <% else %>
+        <%= link_to t("sign_up_for_free_cta"), new_user_registration_path, class: "btn btn-success btn-lg" %>
+        <%= link_to t("sign_in"), new_user_session_path, class: "btn btn-primary btn-lg"  %>
+    <% end %>
   </div>
 </section>

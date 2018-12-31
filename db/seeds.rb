@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Seed: Deleting existing records..."
+puts "Seed: Deleting existing data..."
 
 puts "Seed: Deleting comments..."
 Comment.delete_all
@@ -345,18 +345,6 @@ ticket3 = Ticket.create!(
 puts "Seed: Seeding user uploads..."
 
 puts "Seed: No user uploads possible yet :("
-
-#  create_table "useruploads", force: :cascade do |t|
-#    t.string "name"
-#    t.string "comment"
-#    t.string "datatype"
-#    t.integer "size"
-#    t.string "cloud_identifier"
-#    t.bigint "ticket_id"
-#    t.datetime "created_at", null: false
-#    t.datetime "updated_at", null: false
-#    t.index ["ticket_id"], name: "index_useruploads_on_ticket_id"
-#  end
 
 puts "Seed: Seeding comments..."
 

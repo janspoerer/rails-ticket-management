@@ -1,6 +1,6 @@
   <%= simple_form_for([ticket]) do |f| %>
     <%= f.input :title, placeholder: t("add_a_title_for_your_issue"), label: t("title_label") %>
-    <%= f.input :description, placeholder: t("please_provide_a_full_description"), label: t("description_label") %>
+    <%= f.input :description, placeholder: t("please_provide_a_full_description"), label: t("description_label", as: :text) %>
     <%= f.label :type_of_issue, t("type_of_issue") %>
     <%= f.input :type_of_issue, label: false, collection: [t("knowledge_issue"), t("setup_issue"), t("emergency_issue"), t("capacity_support")], include_blank: t("select_your_issue") %>
     <%= f.input :max_time, placeholder: t("maximum_time"), collection: ['15', '30', '45', '60', '90', '120', '150', '180', '240'], include_blank: t("select_maximum_time"), label: t("max_time_label") %>

@@ -6,7 +6,7 @@
 
     <div class="form-inputs">
       <%= f.input :email, required: true, autofocus: true %>
-      <%= f.input :password, required: true, hint: ("#{@minimum_password_length} " t("minimum_password") if @minimum_password_length) %>
+      <%= f.input :password, required: true %>
       <%= f.input :password_confirmation, required: true %>
     </div>
 
