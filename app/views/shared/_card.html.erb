@@ -2,8 +2,18 @@
   <div class="Card__inner">
     <div class="Card__body">
       <h3 class="Card__title"><%= ticket.title %></h3>
-      <div class="Card__price"> <%= t("time_max") " #{ticket.max_time}" %> </div>
-      <div class="Card__price"> <%= t("time_actual") "#{ticket.actual_time}" %> </div>
+      <div class="Card__price">
+        <%= t("time_max") %> <%= " #{ticket.max_time}" %>
+      </div>
+      <% if ticket.actual_time.nil? %>
+        <div class="Card__price">
+          <%= t("in_progress") %>
+        </div>
+      <% else %>
+        <div class="Card__price">
+          <%= t("time_actual") %> <%= " #{ticket.actual_time}" %>
+        </div>
+      <% end %>
     </div>
   </div>
 <% end %>

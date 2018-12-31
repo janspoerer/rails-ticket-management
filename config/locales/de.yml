@@ -5,7 +5,7 @@ de:
   sign_up_for_free: "Kostenlos anmelden"
 
   # pages/home/_perks
-  we_conduct_all_our_work_from_germany: "Wir arbeiten ausschließlich in Deutschland. Wir sprechen deutsch und englisch."
+  we_conduct_all_our_work_from_germany: "Wir arbeiten ausschließlich in Deutschland. Wir sprechen deutsch und englisch und sind telefonisch erreichbar."
   made_in_germany: "Made in Germany"
   you_receive_free_test: "Sie erhalten freie Teststunden nach Einrichtung eines Unternehmenskontos."
   no_risk: "Null Risiko"
@@ -38,12 +38,17 @@ de:
   comment_placeholder: "Zusätzliche Informationen, Rückrufanforderung, Feedback"
   submit_comment: "Kommentar abschicken"
   this_ticket_does_not_exist: "Dieses Ticket gibt es nicht."
+  comment_added_to_ticket: "Kommentar zu Ticket %{ticket_id} hinzugefügt."
+  comment_not_added_to_ticket: "Es tut uns leid, ss gab einen Fehler beim Erstellen des Kommentars. Bitte kontaktieren Sie uns, damit wir den Fehler beheben können."
+  user_close_ticket: "Dieses Ticket wurde vom Nutzer %{user} geschlossen (%{time})."
+  successfully_closed_ticket: "Das Ticket wurde geschlossen."
 
   # tickets/new
   add_a_new_ticket: "Neues Ticket"
   open_tickets: "Offene Tickets"
   past_tickets: "Alte Tickets"
   tickets_closed_by_user: "Vom Nutzer geschlossene Tickets"
+  successfully_created: "Ticket erfolgreich erstellt. Wir werden Ihr Ticket innerhalb von 24h bearbeiten. Ticket ID: #{@ticket.id}"
 
   # tickets/_index
   no_ticket_in_this_category: "Keine Tickets in dieser Kategorie."
@@ -51,6 +56,7 @@ de:
   # pages/home/_cta
   ready_to_outsource_your_work: "Sind Sie bereit, Ihre Arbeit auszulagern?"
   sign_up_for_free_cta: "Kostenlos anmelden"
+  learn_how_to_creat_a_ticket: "Finden Sie heraus, wie Tickets erstellt werden"
 
   # tickets/_form
   add_a_title_for_your_issue: "Geben Sie einen Titel für Ihr Ticket an"
@@ -69,14 +75,17 @@ de:
   emergency_issue: "3 - Notfall/unerwarteter Fehler"
   capacity_support: "4 - Zeit- und Kapazitätsengpass"
 
-
   # shared/_card
   time_max: "Obere Zeitgrenze:"
   time_actual: "Tatsächlich benötigte Zeit:"
+  in_progress: "Wird bearbeitet"
 
   # devise/registrations/new
   sign_up: "Anmelden"
   characters_minimum: "Buchstaben oder Zahlen mindestens"
+
+  # devise/sessions/new
+  sign_in: "Einloggen"
 
   # devise/registrations/edit
   currently_waiting_confirmation_for: "Warten auf Bestätigung von: %{email}"
