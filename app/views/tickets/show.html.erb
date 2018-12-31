@@ -32,9 +32,8 @@
               <%= f.submit t("submit_comment") %>
             <% end %>
           </div>
-          <%= link_to("Close ticket", update_ticket_path(@ticket), method: :post)
- %>
-                  </div>
+          <%= link_to("Close ticket", update_ticket_path(@ticket), method: :post) %>
+        </div>
       </div>
     </div>
   <% else %>
